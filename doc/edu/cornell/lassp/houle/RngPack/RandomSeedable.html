@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class edu.cornell.lassp.houle.RngPack.RandomSeedable</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">edu.cornell.lassp.houle.RngPack</FONT>
+<BR>Class RandomSeedable</H2>
+<DL>
+<DT>public abstract class <B>RandomSeedable</B><DT>extends edu.cornell.lassp.houle.RngPack.RandomElement
+</DL>
+<DL><DD><CODE>RandomSeedable</CODE> is an abstract class that extends the <CODE>RandomElement</CODE> class to include the ability to automatically generate a valid <CODE>long</CODE> seed from the clock. Thus it provides a consistent interface for seeding interchangable generators. It is reccomended that a <CODE>RandomSeedable</CODE> have a constructor that takes a <CODE>long</CODE> for a seed. For example, if you write a generator called <CODE>ReallyRandom</CODE>, you want to be able to do <PRE> long seed=ReallyRandom.ClockSeed(); RandomSeedable e=new ReallyRandom(seed); </PRE> this makes it convenient to keep a copy of the seed in case you want to restart the generator with the same seed some time in the future. <P> If one is going to use a long to generate a smaller seed by taking <CODE>Clockseed()</CODE> modulus another number, we reccomend that you use a prime number; this ensures that the generator would have the maximum "period" if it were started at regular issues, for instance, by a batch job. See <CODE>Ranmar</CODE> for an example. <P> <A HREF="../src/edu/cornell/lassp/houle/RngPack/RandomSeedable.java"> Source code </A> is available.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>1.0</DD>
+<DT><B>Author:</B><DD><A HREF="http://www.msc.cornell.edu/~houle"> Paul Houle </A> (E-mail: <A HREF="mailto:houle@msc.cornell.edu">houle@msc.cornell.edu</A>)</DD>
+<DT><B>See Also:</B><DD>Ranecu</DD>
+<DD>Ranlux</DD>
+<DD>Ranmar</DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="ClockSeed()"></A>
+
+<H3>ClockSeed</H3>
+<PRE>
+public static long <B>ClockSeed</B>()</PRE>
+<DL><DD>Return a long integer seed calculated from the date. Equivalent to <CODE>ClockSeed(new Date());<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>a long integer seed</DD>
+</DL>
+<HR>
+
+<A NAME="ClockSeed(java.util.Date)"></A>
+
+<H3>ClockSeed</H3>
+<PRE>
+public static long <B>ClockSeed</B>(java.util.Date&nbsp;d)</PRE>
+<DL><DD>Return a long integer seed given a date<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>d</CODE> - a date</DD>
+<DT><B>Returns:</B><DD>a long integer seed</DD>
+</DL>
+<HR>
+
+</BODY>
+</HTML>

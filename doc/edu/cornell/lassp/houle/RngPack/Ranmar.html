@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class edu.cornell.lassp.houle.RngPack.Ranmar</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">edu.cornell.lassp.houle.RngPack</FONT>
+<BR>Class Ranmar</H2>
+<DL>
+<DT>public class <B>Ranmar</B><DT>extends edu.cornell.lassp.houle.RngPack.RandomSeedable
+</DL>
+<DL><DD><TT>RANMAR</TT> is a lagged Fibonacci generator proposed by Marsaglia and Zaman and is a good research grade generator. This version of <TT>RANMAR</TT> is based on the paper by James, which is a good reference for the properties of <TT>RANMAR</TT> and several other generators. <BR> <B>REFERENCES:</B> <BR> F. James, <CITE>Comp. Phys. Comm.</CITE> <STRONG>60</STRONG> (1990) p 329-344 <BR> and was originally described in <BR> G. Marsaglia, A. Zaman and W.-W Tsang, <CITE>Stat. Prob. Lett</CITE> <STRONG>9</STRONG> (1990) p 35. <A HREF="http://nhse.npac.syr.edu:8015/nhse-rw/catalog/random/RANMAR.html"> More info </A>. <P> <A HREF="../src/edu/cornell/lassp/houle/RngPack/Ranmar.java" TARGET="edu.cornell.lassp.houle.source"> Source code </A> is available.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>1.0</DD>
+<DT><B>Author:</B><DD><A HREF="http://www.msc.cornell.edu/~houle" TARGET="edu.cornell.lassp.houle.author"> Paul Houle </A> (E-mail: <A HREF="mailto:houle@msc.cornell.edu">houle@msc.cornell.edu</A>)</DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Field Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="DEFSEED"></A>
+
+<H3>DEFSEED</H3>
+<PRE>
+public static int <B>DEFSEED</B></PRE>
+<DL><DD>Default seed. <CODE>DEFSEED=54217137</CODE><DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="BIG_PRIME"></A>
+
+<H3>BIG_PRIME</H3>
+<PRE>
+public static int <B>BIG_PRIME</B></PRE>
+<DL><DD>The 46,009,220nd prime number, he largest prime less than 9*10<SUP>8</SUP>. Used as a modulus because this version of <TT>RANMAR</TT> needs a seed between 0 and 9*10<SUP>8</SUP> and <CODE>BIG_PRIME</CODE> isn't commensurate with any regular period. <CODE>BIG_PRIME= 899999963</CODE><DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="Ranmar()"></A>
+
+<H3>Ranmar</H3>
+<PRE>
+public <B>Ranmar</B>()</PRE>
+<DL><DD>Initialize Ranmar with a default seed taken from Marsaglia and Zaman's paper. Equivalent to <CODE>Ranmar(54217137).</CODE><DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="Ranmar(int)"></A>
+
+<H3>Ranmar</H3>
+<PRE>
+public <B>Ranmar</B>(int&nbsp;ijkl)</PRE>
+<DL><DD>Initialize Ranmar with a specified integer seed<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>ijkl</CODE> - seed integer; <TT>Ranmar(int ijkl)</TT> takes uses <TT>ijkl</TT> modulus <TT>BIG_PRIME</TT> as a seed for <TT>RANMAR.</TT></DD>
+</DL>
+<HR>
+
+<A NAME="Ranmar(long)"></A>
+
+<H3>Ranmar</H3>
+<PRE>
+public <B>Ranmar</B>(long&nbsp;ijkl)</PRE>
+<DL><DD>Initialize Ranmar with a specified long seed<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>ijkl</CODE> - seed long; <TT>Ranmar(long ijkl)</TT> takes uses <TT>ijkl</TT> modulus <TT>BIG_PRIME</TT> as a seed for <TT>RANMAR.</TT></DD>
+</DL>
+<HR>
+
+<A NAME="Ranmar(java.util.Date)"></A>
+
+<H3>Ranmar</H3>
+<PRE>
+public <B>Ranmar</B>(java.util.Date&nbsp;d)</PRE>
+<DL><DD>Seed <TT>RANMAR</TT> from the clock. <PRE> RandomElement e=new Ranmar(new Date()); </PRE><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>d</CODE> - a Date object to seed Ranmar with, typically <CODE>new Date()</CODE></DD>
+</DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="clone()"></A>
+
+<H3>clone</H3>
+<PRE>
+public java.lang.Object <B>clone</B>()</PRE>
+<DL><DD>Returns a copy of the receiver; the copy will produce identical sequences. After this call has returned, the copy and the receiver have equal but separate state.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>a copy of the receiver.</DD>
+</DL>
+<HR>
+
+<A NAME="ranmarin(int)"></A>
+
+<H3>ranmarin</H3>
+<PRE>
+void <B>ranmarin</B>(int&nbsp;ijkl)</PRE>
+<DL><DD>Internal methods: ranmarin is the initialization code for the generator.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="raw()"></A>
+
+<H3>raw</H3>
+<PRE>
+public final double <B>raw</B>()</PRE>
+<DL><DD>Returns a uniformly distributed pseudo-random double in the range (0,1).<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>a pseudo random number in the range (0,1).</DD>
+</DL>
+<HR>
+
+<A NAME="raw(double[], int)"></A>
+
+<H3>raw</H3>
+<PRE>
+public final void <B>raw</B>(double[]&nbsp;d,
+                      int&nbsp;n)</PRE>
+<DL><DD>A version of the generator for filling arrays, inlined for speed<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>d</CODE> - an array of doubles to be filled</DD>
+<DD><CODE>n</CODE> - size of the array</DD>
+</DL>
+<HR>
+
+</BODY>
+</HTML>

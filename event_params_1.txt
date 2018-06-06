@@ -1,0 +1,35 @@
+#Parameters file for event scenario generator
+#Date: 01/27/07
+
+!Scenario Generator Parameters
+>numEvents=1
+>maxThresholds=9
+
+!Event
+>id=0
+>name=Fire
+>sensor=Temperature
+>!Coordinates
+>>x=20
+>>y=234
+>!PRNG Parameters
+>>seed=4123
+>>luxury=4
+>>distribution=Gaussian
+>>generator=Ranlux
+>!Mobility Parameters
+>>minSpeed=1
+>>maxSpeed=5
+>>minMobilityTime=1
+>>maxMobilityTime=10
+>!Stationary Parameters
+>>minPauseTime=1
+>>maxPauseTime=10
+>!Sensing Model Parameters
+>>model=Point
+>>gridX=50
+>>gridY=50
+>>SensingDistanceThresholds=9 {10.0:0, 9.5:5, 7.5:10, 5.5:15, 4.0:25, 2.5:35, 1.0:45, 0.5:50, 0:55}
+>!Movement Model Parameters
+>model=Waypoint
+

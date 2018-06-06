@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class rbmwsimulator.util.TrafficEvents</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">rbmwsimulator.util</FONT>
+<BR>Class TrafficEvents</H2>
+<DL>
+<DT>public class <B>TrafficEvents</B>
+</DL>
+<DL><DD><p>Title: Role-based Middleware Simulator (RBMW Simulator)</p> <p>Description: A simulator to test several role functionalities such as role-assignment, role-monitoring, role-repair, role-execution scheduling, role state machine, and role load-balancing algorithms. Also, we want to experiment with two domain-specific models such as the Role-Energy (RE) model and Role/Resource Allocation Marginal Utility (RAMU) model.</p> <p>Copyright: Copyright (c) 2006</p> <p>Company: Networking Wireless Sensors (NeWS) Lab, Wayne State University <http://newslab.cs.wayne.edu/></p><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>1.0</DD>
+<DT><B>Author:</B><DD>Manish M. Kochhal <manishk@wayne.edu></DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Field Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="DOWN"></A>
+
+<H3>DOWN</H3>
+<PRE>
+public static final int <B>DOWN</B></PRE>
+<DL><DD>DOWN a specified gnutella peer time: nodeId -DOWN-;<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="UP"></A>
+
+<H3>UP</H3>
+<PRE>
+public static final int <B>UP</B></PRE>
+<DL><DD>UP a specified gnutella peer time: nodeId -UP-;<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INITIALIZE"></A>
+
+<H3>INITIALIZE</H3>
+<PRE>
+public static final int <B>INITIALIZE</B></PRE>
+<DL><DD>Initialize ALL nodes ... time: numNodes -INITIALIZE-; numNodes is redundant here :-)<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INITIATE_FULL_QUERY"></A>
+
+<H3>INITIATE_FULL_QUERY</H3>
+<PRE>
+public static final int <B>INITIATE_FULL_QUERY</B></PRE>
+<DL><DD>Initiate Full Query with TTL-limited flooding time: nodeId -INITIATE_FULL_QUERY- nWords {word1, word2, ..., wordn} fileType (TTL);<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INITIATE_PARTIAL_QUERY"></A>
+
+<H3>INITIATE_PARTIAL_QUERY</H3>
+<PRE>
+public static final int <B>INITIATE_PARTIAL_QUERY</B></PRE>
+<DL><DD>Initiate Partial Query with n words and TTL-limited flooding time: nodeId -INITIATE_PARTIAL_QUERY- nWords {word1, word2, ..., wordn} fileType (TTL);<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INITIATE_MULTIPLE_QUERIES"></A>
+
+<H3>INITIATE_MULTIPLE_QUERIES</H3>
+<PRE>
+public static final int <B>INITIATE_MULTIPLE_QUERIES</B></PRE>
+<DL><DD>Intiate Multiple Queries with a specified Query Rate ... time: nodeId -INITIATE_MULTIPLE_QUERIES- nParamaters {timeInterval, queryRate, distributionType, distributionParameters, ... } (TTL);<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="REDUCE_NODE_CAPACITY"></A>
+
+<H3>REDUCE_NODE_CAPACITY</H3>
+<PRE>
+public static final int <B>REDUCE_NODE_CAPACITY</B></PRE>
+<DL><DD>Reduce Node's Computational Capabilities time: nodeId -REDUCE_NODE_CAPACITY- nParams {cpu Ghz, memory MB, hdisk GB};<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INCREASE_NODE_CAPACITY"></A>
+
+<H3>INCREASE_NODE_CAPACITY</H3>
+<PRE>
+public static final int <B>INCREASE_NODE_CAPACITY</B></PRE>
+<DL><DD>Increase Node's Computational Capabilities time: nodeId -INCREASE_NODE_CAPACITY- nParams {cpu Ghz, memory MB, hdisk GB};<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="REDUCE_NODE_BW"></A>
+
+<H3>REDUCE_NODE_BW</H3>
+<PRE>
+public static final int <B>REDUCE_NODE_BW</B></PRE>
+<DL><DD>Reduce Node's upstream/downstream bandwidth time: nodeId -REDUCE_NODE_BW- (upstream_bw Mbps, downstream_bw Mbps) nParams {distributionType, distributionParameters, ...};<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="INCREASE_NODE_BW"></A>
+
+<H3>INCREASE_NODE_BW</H3>
+<PRE>
+public static final int <B>INCREASE_NODE_BW</B></PRE>
+<DL><DD>Increase Node's upstream/downstream bandwidth time: nodeId -INCREASE_NODE_BW- (upstream_bw Mbps, downstream_bw Mbps) nParams {distributionType, distributionParameters, ...};<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="DROP_PACKETS"></A>
+
+<H3>DROP_PACKETS</H3>
+<PRE>
+public static final int <B>DROP_PACKETS</B></PRE>
+<DL><DD>Drop some/all packets at some node for some time interval ... time: nodeId -DROP_PACKETS- timeInterval; OR time: nodeId -DROP_PACKETS- timeInterval nParams {distributionType, distributionParameters, ...};<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="STOP_SIMULATION"></A>
+
+<H3>STOP_SIMULATION</H3>
+<PRE>
+public static final int <B>STOP_SIMULATION</B></PRE>
+<DL><DD>time: nodeNum -STOP_SIMULATION-; nodeNum is redundant here :-)<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+</BODY>
+</HTML>

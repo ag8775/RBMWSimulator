@@ -1,0 +1,5 @@
+0: 57, 58, 0.8, 10, 1, 400.0, 4, {Temperature, Photo, Pressure, Sound};
+1: 60, 56, 0.8, 8, 1, 400.0, 3, {Temperature, Photo, Pressure};
+2: 56, 56, 0.8, 9, 1, 400.0, 4, {Temperature, Photo, Sound, Humidity};
+3: 56, 59, 0.8, 8, 1, 400.0, 2, {Temperature, Photo};
+4: 57, 60, 0.8, 8, 1, 400.0, 2, {Temperature, Photo};

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class edu.cornell.lassp.houle.RngPack.Ranecu</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">edu.cornell.lassp.houle.RngPack</FONT>
+<BR>Class Ranecu</H2>
+<DL>
+<DT>public class <B>Ranecu</B><DT>extends edu.cornell.lassp.houle.RngPack.RandomSeedable
+</DL>
+<DL><DD>Ranecu is an advanced multiplicative linear congruential random number generator with a period of aproximately 10<SUP>18</SUP>. Ranecu is a direct translation from Fortran of the <B>RANECU</B> subroutine published in the paper <BR> F. James, <CITE>Comp. Phys. Comm.</CITE> <STRONG>60</STRONG> (1990) p 329-344 <BR> The algorithm was originally described in <BR> P. L'Ecuyer, <CITE>Commun. ACM.</CITE> <STRONG>1988</STRONG> (1988) p 742 <BR> <A HREF="http://nhse.npac.syr.edu:8015/nhse-rw/catalog/random/RANECU.html"> More info </A>. <P> <A HREF="../src/edu/cornell/lassp/houle/RngPack/Ranecu.java" TARGET="edu.cornell.lassp.houle.source"> Source code </A> is available.<DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Version:</B><DD>1.0</DD>
+<DT><B>Author:</B><DD><A HREF="http://www.msc.cornell.edu/~houle"> Paul Houle </A> (E-mail: <A HREF="mailto:houle@msc.cornell.edu">houle@msc.cornell.edu</A>)</DD>
+</DL>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Field Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="DEFSEED1"></A>
+
+<H3>DEFSEED1</H3>
+<PRE>
+public static int <B>DEFSEED1</B></PRE>
+<DL><DD>default iseed1 = 12345<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="DEFSEED2"></A>
+
+<H3>DEFSEED2</H3>
+<PRE>
+public static int <B>DEFSEED2</B></PRE>
+<DL><DD>default iseed2 = 67890<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Constructor Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="Ranecu()"></A>
+
+<H3>Ranecu</H3>
+<PRE>
+public <B>Ranecu</B>()</PRE>
+<DL><DD>Initialize <BOLD>RANECU</BOLD> with the default seeds from James.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+<A NAME="Ranecu(int, int)"></A>
+
+<H3>Ranecu</H3>
+<PRE>
+public <B>Ranecu</B>(int&nbsp;s1,
+              int&nbsp;s2)</PRE>
+<DL><DD>Initialize <BOLD>RANECU</BOLD> with two specified integer seeds. Use this to introduce repeatable seeds. Equivalent to <CODE>Ranecu(s1*(long) Integer.MAX_VALUE)+s2)</CODE><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Parameters:</B><DD><CODE>s1</CODE> - seed integer 1 (MSW)</DD>
+<DD><CODE>s2</CODE> - seed integer 2 (LSW)</DD>
+</DL>
+<HR>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF"><TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B>
+</FONT></TD></TR></TABLE>
+
+<A NAME="getSeed()"></A>
+
+<H3>getSeed</H3>
+<PRE>
+public long <B>getSeed</B>()</PRE>
+<DL><DD><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>the current generator state as a long. Can be used to restart the generator where one left off.</DD>
+</DL>
+<HR>
+
+<A NAME="raw()"></A>
+
+<H3>raw</H3>
+<PRE>
+public final double <B>raw</B>()</PRE>
+<DL><DD><DL><DD></DD></DL></DD>
+</DL>
+<DL><DT><B>Returns:</B><DD>a uniformly distributed pseudo-random double in the range (0,1).</DD>
+<DT><B>See Also:</B><DD>RandomElement#raw</DD>
+</DL>
+<HR>
+
+<A NAME="raw(double[], int)"></A>
+
+<H3>raw</H3>
+<PRE>
+public final void <B>raw</B>(double[]&nbsp;d,
+                      int&nbsp;n)</PRE>
+<DL><DD>This is an inline version that returns an array of doubles for speed.<DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+<HR>
+
+</BODY>
+</HTML>

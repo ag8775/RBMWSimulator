@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><!--JBuilder QuickDoc-->
+<HEAD>
+<TITLE>Class simulator.random.RandomDistribution</TITLE><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+
+<H2>
+<FONT SIZE="-1">simulator.random</FONT>
+<BR>Class RandomDistribution</H2>
+<DL>
+<DT>public class <B>RandomDistribution</B><DT>extends cern.jet.random.AbstractDistribution
+</DL>
+<DL><DD>Simplifying wrapper for AbstractDistribution. A RandomDistribution simply holds a reference to an AbstractDistribution, to which it delegates the nextInt() and nextDouble() methods. This allows us to hide AbstractDistribution from the SSFNet users.<p> Unfortunately, it also hides the details of the underlying distribution from the user --- power users may wish to access the underlying distribution in order to cast it to a known distribution from the CERN package.<p> For example, if we have a RandomDistribution whose implementation is an instance of cern.jet.random.Exponential, we might want to access ((Exponential)getImplementation()).pdf(x), the probability distribution function.<p><DL><DD></DD></DL></DD>
+</DL>
+<DL></DL>
+</BODY>
+</HTML>
